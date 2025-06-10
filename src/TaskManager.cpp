@@ -17,7 +17,7 @@ void PeriodicTaskManager::registerTask(const char *id, void (*callback)(), unsig
         }
     }
 
-    if (taskCount < MAX_TASKS)
+    if (taskCount < MAX_TASKS) 
     {
         strncpy(tasks[taskCount].id, id, MAX_ID_LENGTH - 1);
         tasks[taskCount].id[MAX_ID_LENGTH - 1] = '\0';

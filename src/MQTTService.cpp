@@ -9,6 +9,7 @@ MQTTService::MQTTService(WiFiClient &espClient, PeriodicTaskManager &taskManager
 void MQTTService::setupMQTT()
 {
     client.setServer(HOST, PORT);
+    client.setKeepAlive(30);
     client.setCallback([this](char *topic, byte *payload, unsigned int length)
                        { callback(topic, payload, length); });
 }
@@ -74,7 +75,7 @@ void MQTTService::restartDevice()
 {
     Serial.println("Device has been restrted");
     digitalWrite(RELAY_PIN,LOW);
-    delay(10000);
+    delay(1000 * 40);
     digitalWrite(RELAY_PIN, HIGH);
 }
 

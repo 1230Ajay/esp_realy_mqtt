@@ -10,7 +10,7 @@
 #define USER_PASS "rkirail"
 
 /// --- UID
-#define UID ( char*) "284"
+#define UID ( char*) "9e009754-a1ea-42aa-bf8b-71d7083f9ff1"
 
 /// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ SUBSCRIBING TOPICS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
